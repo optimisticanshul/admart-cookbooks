@@ -22,7 +22,7 @@
 ###
 # Supported: cdh, hdp, bigtop
 default['hadoop']['distribution'] = 'cdh'
-default['hadoop']['distribution_version'] = 5
+default['hadoop']['distribution_version'] = '5.1.3'
 
 default['hadoop']['force_format'] = false
 
