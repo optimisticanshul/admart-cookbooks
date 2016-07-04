@@ -1,0 +1,9 @@
+DEPENDENCIES
+  krb5
+    path: .
+    metadata: true
+
+GRAPH
+  krb5 (2.0.0)
+    ntp (>= 0.0.0)
+  ntp (1.8.6)

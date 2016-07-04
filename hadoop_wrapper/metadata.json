@@ -1,0 +1,39 @@
+{
+  "name": "hadoop_wrapper",
+  "description": "Hadoop wrapper",
+  "long_description": "# hadoop wrapper cookbook\n\n# Description\n\nThis cookbook is a wrapper cookbook for the [Hadoop cookbook](https://github.com/caskdata/hadoop_cookbook).  It is a part of [Coopr](https://github.com/caskdata/coopr), which is a general purpose tool that can spin up several types of clusters including Hadoop.  This cookbook provides several initialization recipes for Hadoop components.  It does not actually start any of the hadoop services.  This can be done by wrapping the service resources in the underlying [Hadoop cookbook](https://github.com/caskdata/hadoop_cookbook), for example:\n```ruby\n    ruby_block \"start namenode\" do\n      block do\n        resources(\"hadoop-hdfs-namenode\").run_action(:start)\n      end \n    end\n```\n\nAdditional information can be found in the [Hadoop cookbook wiki](https://github.com/caskdata/hadoop_cookbook/wiki/Wrapping-this-cookbook).\n\n\n# Requirements\n\n* Chef 11.4.0+\n* CentOS 6.4+\n* Ubuntu 12.04+\n\n\n# Cookbook Dependencies\n\n* apt\n* yum\n* java\n* hadoop\n* krb5_utils (from https://github.com/caskdata/krb5_utils_cookbook)\n\n# Attributes\n\nThere are no attributes specific to this cookbook, however we set many default attributes for the underlying cookbooks in order to have a reasonably configured Hadoop cluster.  Be sure to look at the attributes files and override as desired.\n\n\n# Usage\n\nInclude the relevant recipes in your run-list.\n\n\n\n",
+  "maintainer": "Cask Data, Inc.",
+  "maintainer_email": "ops@cask.co",
+  "license": "Apache 2.0",
+  "platforms": {
+  },
+  "dependencies": {
+    "apt": ">= 0.0.0",
+    "java": ">= 0.0.0",
+    "krb5_utils": ">= 0.0.0",
+    "yum": ">= 0.0.0",
+    "hadoop": ">= 2.0.0",
+    "mysql": "< 5.0.0",
+    "database": "< 2.1.0",
+    "krb5": ">= 1.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.4.1",
+  "source_url": "",
+  "issues_url": ""
+}
