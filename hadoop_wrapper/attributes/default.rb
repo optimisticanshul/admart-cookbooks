@@ -19,7 +19,6 @@ default['hadoop']['yarn_site']['yarn.scheduler.minimum-allocation-mb'] = '512'
 default['hadoop']['yarn_site']['yarn.nodemanager.resourcemanager.connect.wait.secs'] = '-1'
 default['hadoop']['yarn_site']['yarn.nodemanager.vmem-check-enabled'] = 'false'
 default['hadoop']['yarn_site']['yarn.nodemanager.vmem-pmem-ratio'] = '5.1'
-default['hadoop']['yarn_site']['yarn.nodemanager.delete.debug-delay-sec'] = '86400'
 
 # Memory for YARN
 unless node['hadoop']['yarn_site'].key?('yarn.nodemanager.resource.memory-mb')
