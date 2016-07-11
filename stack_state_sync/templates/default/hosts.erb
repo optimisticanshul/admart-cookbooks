@@ -11,6 +11,7 @@ ff02::3 ip6-allhosts
 
 # OpsWorks Layer State
 127.0.0.1 localhost.localdomain localhost
+172.16.77.22 ascpdb02.angoss.local
 
 <% @nodes.each do |node| -%>
 <% if node['private_ip'] && node['hostname'] %>
